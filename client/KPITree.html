@@ -1,0 +1,472 @@
+<template name="KPITree">
+
+    <div class="ui fifteen wide grid kpitree">
+        <div class="fifteen wide column">
+            <div class="ui center aligned grid">
+
+                <div class="row" style="padding-top: 0px;padding-bottom: 0px;">
+                    <div class="six wide column"></div>
+                    <div class="four wide column">
+                        <div class="boxlid epossales">
+                            Epos Sales
+                        </div>
+                        <div class="openbox">
+                            <div class="">
+                                Actual: {{EPOS_SALES_TY}}
+                            </div>
+                            <div class="">
+                                % Change: {{EPOS_SALES_YOY}}
+                            </div>
+                            <div class="">
+                                Contribution: {{EPOS_SALES_CONTRIB}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="six wide column"></div>
+                </div>
+
+                <div class="row">
+                    <div class="ui center aligned grid">
+                        <div class="eight wide column borderright"></div>
+                        <div class="eight wide column"></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="ui center aligned grid">
+                        <div class="six wide column borderleft borderright bordertop"></div>
+                    </div>
+                </div>
+
+                <div class="row" style="padding-top: 0px;padding-bottom: 0px;">
+                    <div class="three wide column"></div>
+                    <div class="four wide column">
+                        <div class="boxlid sales">
+                            ClubCard Sales
+                        </div>
+                        <div class="openbox">
+                            <div class="">
+                                Actual: {{CC_SALES_TY}}
+                            </div>
+                            <div class="">
+                                % Change: {{CC_SALES_YOY}}
+                            </div>
+                            <div class="">
+                                Contribution: {{CC_SALES_CONTRIB}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="two wide column"></div>                    
+                   <div class="four wide column">
+                        <div class="boxlid epossales">
+                            Non CC Sales
+                        </div>
+                        <div class="openbox">
+                            <div class="">
+                                Actual: {{NON_CC_TY}}
+                            </div>
+                            <div class="">
+                                % Change: {{NON_CC_YOY}}
+                            </div>
+                            <div class="">
+                                Contribution: {{NON_CC_CONTRIB}}
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="three wide column"></div>
+                </div>
+
+                <div class="row">
+                    <div class="ui center aligned grid">
+                        <div class="five wide column borderright"></div>
+                        <div class="eleven wide column"></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="ui center aligned grid">
+                        <div class="eight wide column borderleft borderright bordertop"></div>
+                    </div>
+                </div>
+
+                <div class="row" style="padding-top: 0px;padding-bottom: 0px;">
+                    <div class="four wide column">
+                        <div class="boxlid customers">
+                            Customers
+                        </div>
+                        <div class="openbox">
+                            <div class="">
+                                Actual: {{CC_CUSTOMERS_TY}}
+                            </div>
+                            <div class="">
+                                % Change: {{CC_CUSTOMERS_YOY}}
+                            </div>
+                            <div class="">
+                                Contribution: {{CC_CUSTOMERS_CONTRIB}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="four wide column"></div>
+                    <div class="four wide column">
+                        <div class="boxlid SPC">
+                            Spend per Customer
+                        </div>
+                        <div class="openbox">
+                            <div class="">
+                                Actual: {{CC_SPC_TY}}
+                            </div>
+                            <div class="">
+                                % Change: {{CC_SPC_YOY}}
+                            </div>
+                            <div class="">
+                                Contribution: {{CC_SPC_CONTRIB}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="ui center aligned grid">
+                        <div class="eight wide column borderright"></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="ui center aligned grid">
+                        <div class="four wide column"></div>
+                        <div class="four wide column"></div>
+                        <div class="four wide column borderleft borderright bordertop"></div>
+                    </div>
+                </div>
+
+                <div class="row" style="padding-top: 0px;padding-bottom: 0px;">
+                    <div class="four wide column">
+
+                    </div>
+
+                    <div class="four wide column">
+
+                    </div>
+
+                    <div class="four wide column">
+                        <div class="SPV boxlid">
+                            Spend per Visit
+                        </div>
+                        <div class="openbox">
+                            <div class="">
+                                Actual: {{CC_SPV_TY}}
+                            </div>
+                            <div class="">
+                                % Change: {{CC_SPV_YOY}}
+                            </div>
+                            <div class="">
+                                Contribution: {{CC_SPV_CONTRIB}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="four wide column">
+                        <div class="VPC boxlid">
+                            Visits per Customer
+                        </div>
+                        <div class="openbox">
+                            <div class="">
+                                Actual: {{CC_VPC_TY}}
+                            </div>
+                            <div class="">
+                                % Change: {{CC_VPC_YOY}}
+                            </div>
+                            <div class="">
+                                Contribution: {{CC_VPC_CONTRIB}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="ui center aligned grid">
+                        <div class="four wide column borderright"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="ui center aligned grid">
+                        <div class="four wide column"></div>
+                        <div class="four wide column borderleft borderright bordertop"></div>
+                    </div>
+                </div>
+
+                <div class="row" style="padding-top: 0px;padding-bottom: 0px;">
+                    <div class="four wide column"></div>
+                    <div class="four wide column">
+                        <div class="PPU boxlid">
+                            Price per Unit
+                        </div>
+                        <div class="openbox">
+                            <div class="">
+                                Actual: {{CC_SPU_TY}}
+                            </div>
+                            <div class="">
+                                % Change: {{CC_SPU_YOY}}
+                            </div>
+                            <div class="">
+                                Contribution: {{CC_SPU_CONTRIB}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="four wide column">
+                        <div class="UPV boxlid">
+                            Units per Visit
+                        </div>
+                        <div class="openbox">
+                            <div class="">
+                                Actual: {{CC_UPV_TY}}
+                            </div>
+                            <div class="">
+                                % Change: {{CC_UPV_YOY}}
+                            </div>
+                            <div class="">
+                                Contribution: {{CC_UPV_CONTRIB}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="kpitext">
+    <div class="">
+
+        {{# each narrations}} {{> narration}} {{/each}}
+
+        <!--<ul>-->
+        <!--    {{# each listitems}} {{> listitem}} {{/each}}-->
+        <!--</ul>-->
+    </div>
+</template>
+
+<template name="narration">
+    <h4>{{header}}</h4>
+    <p>{{{paragraph}}}</p>
+</template>
+
+<!--<template name="listitem">-->
+<!--    <li>-->
+<!--        {{listitem}}-->
+<!--    </li>-->
+<!--</template>-->
+
+
+<template name="KPITreeStandard">
+
+    <div class="ui sixteen wide grid kpitree">
+        <div class="sixteen wide column">
+            <div class="ui center aligned grid">
+                <div class="row" style="padding-top: 0px;padding-bottom: 0px;">
+                    <div class="six wide column"></div>
+                    <div class="four wide column">
+                        <div class="boxlid sales">
+                            Sales
+                        </div>
+                        <div class="openbox">
+                            <div class="">
+                                This Year: {{kpitreedata.sales.current.Value}}
+                            </div>
+                            <div class="">
+                                % Change: {{kpitreedata.sales.change.value}}
+                            </div>
+                            <div class="">
+                                Contribution: {{kpitreedata.sales.change.value}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="six wide column"></div>
+                </div>
+
+                <div class="row">
+                    <div class="ui center aligned grid">
+                        <div class="eight wide column borderright"></div>
+                        <div class="eight wide column"></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="ui center aligned grid">
+                        <div class="eight wide column borderleft borderright bordertop"></div>
+                    </div>
+                </div>
+
+                <div class="row" style="padding-top: 0px;padding-bottom: 0px;">
+                    <div class="four wide column">
+                        <div class="boxlid customers">
+                            Customers
+                        </div>
+                        <div class="openbox">
+                            <div class="">
+                                Current: {{kpitreedata.cust.current.Value}}
+                            </div>
+                            <div class="">
+                                % Change: {{formatPercent kpitreedata.cust.change.value}}
+                            </div>
+                            <div class="">
+                                Contribution: {{kpitreedata.cust.contribution.value}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="four wide column"></div>
+                    <div class="four wide column">
+                        <div class="boxlid SPC">
+                            Spend per Customer
+                        </div>
+                        <div class="openbox">
+                            <div class="">
+                                Current: {{kpitreedata.spc.current.Value}}
+                            </div>
+                            <div class="">
+                                % Change: {{formatPercent kpitreedata.spc.change.value}}
+                            </div>
+                            <div class="">
+                                Contribution: {{kpitreedata.spc.contribution.value}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="ui center aligned grid">
+                        <div class="eight wide column borderleft borderright"></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="ui center aligned grid">
+                        <div class="four wide column borderleft borderright bordertop"></div>
+                        <div class="four wide column"></div>
+                        <div class="four wide column borderleft borderright bordertop"></div>
+                    </div>
+                </div>
+
+                <div class="row" style="padding-top: 0px;padding-bottom: 0px;">
+                    <div class="four wide column">
+                        <div class="CP boxlid">
+                            Customer Penetration
+                        </div>
+                        <div class="openbox">
+                            <div class="">
+                                Current: {{kpitreedata.cp.current.Value}}
+                            </div>
+                            <div class="">
+                                % Change: {{formatPercent kpitreedata.cp.change.value}}
+                            </div>
+                            <div class="">
+                                Contribution: {{kpitreedata.cp.contribution.value}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="four wide column">
+                        <div class="TC boxlid">
+                            Tesco Customers
+                        </div>
+                        <div class="openbox">
+                            <div class="">
+                                Current: {{kpitreedata.tc.current.Value}}
+                            </div>
+                            <div class="">
+                                % Change: {{formatPercent kpitreedata.tc.change.value}}
+                            </div>
+                            <div class="">
+                                Contribution: {{kpitreedata.tc.contribution.value}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="four wide column">
+                        <div class="SPV boxlid">
+                            Spend per Visit
+                        </div>
+                        <div class="openbox">
+                            <div class="">
+                                Current: {{kpitreedata.spv.current.Value}}
+                            </div>
+                            <div class="">
+                                % Change: {{formatPercent kpitreedata.spv.change.value}}
+                            </div>
+                            <div class="">
+                                Contribution: {{kpitreedata.spv.contribution.value}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="four wide column">
+                        <div class="VPC boxlid">
+                            Visits per Customer
+                        </div>
+                        <div class="openbox">
+                            <div class="">
+                                Current: {{kpitreedata.vpc.current.Value}}
+                            </div>
+                            <div class="">
+                                % Change: {{formatPercent kpitreedata.vpc.change.value}}
+                            </div>
+                            <div class="">
+                                Contribution: {{kpitreedata.vpc.contribution.value}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="ui center aligned grid">
+                        <div class="four wide column borderright"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="ui center aligned grid">
+                        <div class="four wide column"></div>
+                        <div class="four wide column borderleft borderright bordertop"></div>
+                    </div>
+                </div>
+
+                <div class="row" style="padding-top: 0px;padding-bottom: 0px;">
+                    <div class="four wide column"></div>
+                    <div class="four wide column">
+                        <div class="PPU boxlid">
+                            Price per Unit
+                        </div>
+                        <div class="openbox">
+                            <div class="">
+                                Current: {{kpitreedata.ppu.current.Value}}
+                            </div>
+                            <div class="">
+                                % Change: {{formatPercent kpitreedata.ppu.change.value}}
+                            </div>
+                            <div class="">
+                                Contribution: {{kpitreedata.ppu.contribution.value}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="four wide column">
+                        <div class="UPV boxlid">
+                            Units per Visit
+                        </div>
+                        <div class="openbox">
+                            <div class="">
+                                Current: {{kpitreedata.upv.current.Value}}
+                            </div>
+                            <div class="">
+                                % Change: {{formatPercent kpitreedata.upv.change.value}}
+                            </div>
+                            <div class="">
+                                Contribution: {{kpitreedata.upv.contribution.value}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

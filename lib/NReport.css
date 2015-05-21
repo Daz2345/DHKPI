@@ -1,0 +1,147 @@
+/* CSS declarations go here */
+
+body {
+    font-family: arial;
+    background-color: #ededed;
+}
+.page {
+    margin: 0 auto;
+    width: 80%;
+}
+.left {
+    width: 50%;
+    float: left;
+}
+.right {
+    width: 50%;
+    float: right;
+}
+.nobullets {
+    list-style-type: none;
+}
+.bullets {
+    list-style-type: circle;
+}
+a {
+    color: black;
+}
+.kpitree {
+    font-size: 0.8em;
+}
+.borderright {
+    border-right: thin double lightgrey;
+}
+.borderleft {
+    border-left: thin double lightgrey;
+}
+.bordertop {
+    border-top: thin double lightgrey;
+}
+.boxlid {
+    border-left: thin double lightgrey;
+    border-right: thin double lightgrey;
+    border-top: thin double lightgrey;
+    background-color: #fff;
+}
+.box {
+    border: thin double lightgrey;
+}
+.openbox {
+    border-left: thin double lightgrey;
+    border-right: thin double lightgrey;
+    border-bottom: thin double lightgrey;
+    background-color: #fff;
+}
+.epossales {
+    border-bottom: thin solid grey;
+}
+.sales {
+    border-bottom: thin solid blue;
+}
+.customers {
+    border-bottom: thin solid green;
+}
+.SPC {
+    border-bottom: thin solid steelblue;
+}
+.CP {
+    border-bottom: thin solid red;
+}
+.TC {
+    border-bottom: thin solid red;
+}
+.VPC {
+    border-bottom: thin solid red;
+}
+.SPV {
+    border-bottom: thin solid red;
+}
+.UPV {
+    border-bottom: thin solid red;
+}
+.PPU {
+    border-bottom: thin solid red;
+}
+.underline {
+    text-decoration: underline;
+}
+
+.floatright {
+    float:right;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    h4 {
+        font-size: 2.5em;
+    }
+    p {
+        font-size: 2.5em;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px)  and (orientation : landscape) {
+    #hideland {
+        display:none;
+    }
+    #showland {
+        display:normal;
+    }
+}
+    
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px)  and (orientation : portrait) {
+    #hideland {
+        display:normal;
+    }
+    #showland {
+        display:none;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    h4 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : landscape) {
+    #hideland {
+        display:none;
+    }
+    #showland {
+        display:normal;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait) {
+    #hideland {
+        display:normal;
+    }
+    #showland {
+        display:none;
+    }
+}

@@ -1,0 +1,78 @@
+<head>
+  <title>Active Intelligence</title>
+  <link rel="icon" sizes="16x16 32x32" href="http://www.dunnhumby.com/favicon.ico">
+</head>
+
+<body>
+
+</body>
+
+<template name="home">
+  {{ > reportslist}}
+</template>
+
+<template name="header">
+  <div class="ui sixteen column grid">
+    <div class="left floated left aligned eight wide column">
+      <div class="ui huge header underline">dunnhumby</div>
+    </div>
+    <div class="centre aligned sixteen wide column">
+      <h1 class="ui huge horizontal divider header"><a href="{{pathFor 'home'}}">Active Intelligence Reports</a></h1>
+    </div>
+  </div>
+</template>
+
+<template name="login">
+  {{> atForm}}
+</template>
+
+<template name="reportslist">
+  <div class="ui">
+    <h2 class="ui header underline">Reports Available</h2>
+    <div class="ui vertical buttons">
+      <a href="{{pathFor route='kpiTreeLatest'}}">
+        <div class="ui button huge">Latest KPI Report</div>
+      </a>
+      <br> {{# each listofreports}} {{> report}} {{/each}}
+    </div>
+  </div>
+</template>
+
+<template name="report">
+  <a href="{{pathFor 'kpiTreePage'}}">
+    <div class="ui button medium">{{header}} - Period {{period}}</div>
+  </a>
+  <br>
+</template>
+
+<template name="kpiTreePage">
+
+  <div class="ui row">
+    <h2 class="ui center aligned header">Period - {{period}}</h2> 
+    <div></div>
+  </div>
+
+  <div class="ui doubling two column grid">
+    <div id="hideland" class="ui doubling column">
+      {{> kpitext}}
+    </div>
+    <div id="showland" class="ui doubling column">
+      {{> KPITree}}
+    </div>
+  </div>
+
+  <!--{{> trendschart}}-->
+
+</template>
+
+<template name="trendschart">
+  <div class="trendschart"></div>
+</template>
+
+<template name="newsfeed">
+  <div class="ui row">
+    <marquee ONMOUSEOVER="this.stop();" ONMOUSEOUT="this.start();">
+      <p>The news can go here.</p>
+    </MARQUEE>
+  </div>
+</template>
